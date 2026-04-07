@@ -220,6 +220,18 @@
   .cert-slide:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.25); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
   .cert-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent3); flex-shrink: 0; box-shadow: 0 0 10px var(--accent3); margin-bottom: 1.25rem; }
   .cert-text { font-size: 1.05rem; color: var(--text); line-height: 1.5; font-weight: 600; text-align: center; }
+  
+  .cert-slide-img {
+    width: 250px; height: 190px; flex-shrink: 0;
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; text-decoration: none;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); overflow: hidden;
+  }
+  .cert-slide-img:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.25); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+  .cert-slide-img img {
+    border-radius: 8px; width: 100%; height: 100%; object-fit: cover; pointer-events: none;
+  }
 
   /* CONTACT */
   .contact-wrapper {
@@ -292,7 +304,7 @@
     <p class="hero-desc">Detail-oriented analyst with 6 months of hands-on experience turning raw data into actionable insights. Skilled in SQL, Python, Power BI, Excel & Tableau.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="Resume.pdf" target="_blank" class="btn-outline">View Resume</a>
+      <a href="Divya__Sharma.pdf" target="_blank" class="btn-outline">View Resume</a>
       <a href="https://www.wscubetech.com/portfolio/data/divya-sharma-fhsf7oc" target="_blank" class="btn-outline">Institute Portfolio</a>
       <a href="#contact" class="btn-outline">Get in Touch</a>
     </div>
@@ -407,7 +419,7 @@
           <div class="project-num">03</div>
           <a href="https://github.com/Divya9916/MacDonald-s-Restaurant-Sales-Analysis" target="_blank" class="btn-outline" style="padding: 6px 16px; font-size: 0.75rem; border-color: rgba(255,255,255,0.1); color: var(--muted); border-radius: 8px;">View on GitHub</a>
         </div>
-        <span class="project-tool" style="background:rgba(56,189,248,0.1);color:var(--accent2);border:1px solid rgba(56,189,248,0.25);">SQL | Power BI</span>
+        <span class="project-tool" style="background:rgba(251,191,36,0.1);color:#fbbf24;border:1px solid rgba(251,191,36,0.25);">Excel</span>
         <div class="project-title">McDonald's Data Analysis</div>
         <div class="project-desc" style="font-size: 0.85em; margin-bottom: 0.5rem; color: var(--muted);"><strong>Problem:</strong> Analysed McDonald's operational & nutritional datasets.<br><br><strong>Outcome:</strong> Extracted actionable insights on menu categorisation and health metrics.</div>
       </div>
@@ -437,7 +449,7 @@
           <div class="project-num">06</div>
           <a href="https://github.com/Divya9916/Jenson-USA-Advanced-Sql-Project" target="_blank" class="btn-outline" style="padding: 6px 16px; font-size: 0.75rem; border-color: rgba(255,255,255,0.1); color: var(--muted); border-radius: 8px;">View on GitHub</a>
         </div>
-        <span class="project-tool" style="background:rgba(110,231,183,0.1);color:var(--accent);border:1px solid rgba(110,231,183,0.25);">Power BI</span>
+        <span class="project-tool" style="background:rgba(56,189,248,0.1);color:var(--accent2);border:1px solid rgba(56,189,248,0.25);">SQL</span>
         <div class="project-title">Jenson Data Analysis</div>
         <div class="project-desc" style="font-size: 0.85em; margin-bottom: 0.5rem; color: var(--muted);"><strong>Problem:</strong> Tracked KPIs and sales data for Jenson.<br><br><strong>Outcome:</strong> Built interactive dashboards uncovering internal operational bottlenecks.</div>
       </div>
@@ -447,7 +459,7 @@
           <div class="project-num">07</div>
           <a href="https://github.com/Divya9916/Spotify-Youtube-music-PowerBi-Project" target="_blank" class="btn-outline" style="padding: 6px 16px; font-size: 0.75rem; border-color: rgba(255,255,255,0.1); color: var(--muted); border-radius: 8px;">View on GitHub</a>
         </div>
-        <span class="project-tool" style="background:rgba(167,139,250,0.1);color:var(--accent3);border:1px solid rgba(167,139,250,0.25);">Python | EDA</span>
+        <span class="project-tool" style="background:rgba(110,231,183,0.1);color:var(--accent);border:1px solid rgba(110,231,183,0.25);">Power BI</span>
         <div class="project-title">Spotify Data Analysis</div>
         <div class="project-desc" style="font-size: 0.85em; margin-bottom: 0.5rem; color: var(--muted);"><strong>Problem:</strong> Explored music streams and popularity metrics.<br><br><strong>Outcome:</strong> Performed deep EDA to find correlations between audio features and streams.</div>
       </div>
@@ -457,7 +469,7 @@
           <div class="project-num">08</div>
           <a href="https://github.com/Divya9916/Financial-Analysis-PowerBi-Data-Modelling-and-Dax" target="_blank" class="btn-outline" style="padding: 6px 16px; font-size: 0.75rem; border-color: rgba(255,255,255,0.1); color: var(--muted); border-radius: 8px;">View on GitHub</a>
         </div>
-        <span class="project-tool" style="background:rgba(56,189,248,0.1);color:var(--accent2);border:1px solid rgba(56,189,248,0.25);">SQL | DAX</span>
+        <span class="project-tool" style="background:rgba(110,231,183,0.1);color:var(--accent);border:1px solid rgba(110,231,183,0.25);">Power BI</span>
         <div class="project-title">Financial Market Capstone</div>
         <div class="project-desc" style="font-size: 0.85em; margin-bottom: 0.5rem; color: var(--muted);"><strong>Problem:</strong> Evaluated historical market data to assess volatility.<br><br><strong>Outcome:</strong> Built interactive dashboards for risk management and comparisons.</div>
       </div>
@@ -467,7 +479,7 @@
           <div class="project-num">09</div>
           <a href="https://github.com/Divya9916/Python-Super-Market-Billing-System" target="_blank" class="btn-outline" style="padding: 6px 16px; font-size: 0.75rem; border-color: rgba(255,255,255,0.1); color: var(--muted); border-radius: 8px;">View on GitHub</a>
         </div>
-        <span class="project-tool" style="background:rgba(110,231,183,0.1);color:var(--accent);border:1px solid rgba(110,231,183,0.25);">Excel | Tableau</span>
+        <span class="project-tool" style="background:rgba(167,139,250,0.1);color:var(--accent3);border:1px solid rgba(167,139,250,0.25);">Python</span>
         <div class="project-title">SuperMarket Sales Analysis</div>
         <div class="project-desc" style="font-size: 0.85em; margin-bottom: 0.5rem; color: var(--muted);"><strong>Problem:</strong> Analysed retail consumer purchases, branches, and demographics.<br><br><strong>Outcome:</strong> Uncovered key seasonal shopping behaviours and optimized forecasting.</div>
       </div>
@@ -495,19 +507,17 @@
     <div class="cert-marquee-container">
       <div class="cert-marquee-track">
         <!-- ORIGINALS -->
-        <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide"><div class="cert-dot"></div><div class="cert-text">SQL (Basic, Intermediate)<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">HackerRank (Apr 2026)</span></div></a>
-        <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide"><div class="cert-dot" style="background:var(--accent2); box-shadow:0 0 10px var(--accent2);"></div><div class="cert-text">Data Analyst, Python, SQL, Excel<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">OneRoadmap (Apr 2026)</span></div></a>
-        <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide"><div class="cert-dot" style="background:var(--accent2); box-shadow:0 0 10px var(--accent2);"></div><div class="cert-text">Data Analytics Job Simulation<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">Deloitte Australia (Forage)</span></div></a>
-        <a href="certificates/WsCubeTech_DataAnalytics.pdf" target="_blank" class="cert-slide"><div class="cert-dot"></div><div class="cert-text">Data Analytics (SQL, Python, Power BI)<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">WsCubeTech</span></div></a>
-        <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide"><div class="cert-dot" style="background:var(--accent3); box-shadow:0 0 10px var(--accent3);"></div><div class="cert-text">Generative AI Workshop<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">Growth School</span></div></a>
-        <a href="certificates/be10x_AITools.pdf" target="_blank" class="cert-slide"><div class="cert-dot" style="background:var(--accent3); box-shadow:0 0 10px var(--accent3);"></div><div class="cert-text">AI Tools Workshop<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">be10x</span></div></a>
+        <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide-img"><img src="certificates/HackerRank_SQL.png" alt="HackerRank SQL"></a>
+        <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide-img"><img src="certificates/OneRoadmap_DataAnalyst.png" alt="OneRoadmap Data Analyst"></a>
+        <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Deloitte_JobSimulation.png" alt="Deloitte Job Simulation"></a>
+        <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide-img"><img src="certificates/GrowthSchool_GenAI.png" alt="Growth School GenAI"></a>
+        <a href="certificates/be10x_AITools.pdf" target="_blank" class="cert-slide-img"><img src="certificates/be10x_AITools.png" alt="be10x AI Tools"></a>
         <!-- DUPLICATES FOR INFINITE LOOPING -->
-        <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide"><div class="cert-dot"></div><div class="cert-text">SQL (Basic, Intermediate)<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">HackerRank (Apr 2026)</span></div></a>
-        <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide"><div class="cert-dot" style="background:var(--accent2); box-shadow:0 0 10px var(--accent2);"></div><div class="cert-text">Data Analyst, Python, SQL, Excel<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">OneRoadmap (Apr 2026)</span></div></a>
-        <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide"><div class="cert-dot" style="background:var(--accent2); box-shadow:0 0 10px var(--accent2);"></div><div class="cert-text">Data Analytics Job Simulation<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">Deloitte Australia (Forage)</span></div></a>
-        <a href="certificates/WsCubeTech_DataAnalytics.pdf" target="_blank" class="cert-slide"><div class="cert-dot"></div><div class="cert-text">Data Analytics (SQL, Python, Power BI)<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">WsCubeTech</span></div></a>
-        <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide"><div class="cert-dot" style="background:var(--accent3); box-shadow:0 0 10px var(--accent3);"></div><div class="cert-text">Generative AI Workshop<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">Growth School</span></div></a>
-        <a href="certificates/be10x_AITools.pdf" target="_blank" class="cert-slide"><div class="cert-dot" style="background:var(--accent3); box-shadow:0 0 10px var(--accent3);"></div><div class="cert-text">AI Tools Workshop<br><br><span style="color:var(--muted); font-size:0.85rem; font-weight:500;">be10x</span></div></a>
+        <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide-img"><img src="certificates/HackerRank_SQL.png" alt="HackerRank SQL"></a>
+        <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide-img"><img src="certificates/OneRoadmap_DataAnalyst.png" alt="OneRoadmap Data Analyst"></a>
+        <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Deloitte_JobSimulation.png" alt="Deloitte Job Simulation"></a>
+        <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide-img"><img src="certificates/GrowthSchool_GenAI.png" alt="Growth School GenAI"></a>
+        <a href="certificates/be10x_AITools.pdf" target="_blank" class="cert-slide-img"><img src="certificates/be10x_AITools.png" alt="be10x AI Tools"></a>
       </div>
     </div>
   </div>
