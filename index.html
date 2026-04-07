@@ -222,15 +222,22 @@
   .cert-text { font-size: 1.05rem; color: var(--text); line-height: 1.5; font-weight: 600; text-align: center; }
   
   .cert-slide-img {
-    width: 250px; height: 190px; flex-shrink: 0;
+    width: 260px; flex-shrink: 0;
     background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
-    display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; text-decoration: none;
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 0.6rem 0.6rem 0.8rem; text-decoration: none;
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
     backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); overflow: hidden;
   }
   .cert-slide-img:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.25); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
   .cert-slide-img img {
-    border-radius: 8px; width: 100%; height: 100%; object-fit: cover; pointer-events: none;
+    border-radius: 8px; width: 100%; height: 160px; object-fit: cover; pointer-events: none; flex-shrink: 0;
+  }
+  .cert-slide-title {
+    font-size: 0.82rem; font-weight: 600; color: var(--text); text-align: center;
+    margin-top: 0.6rem; line-height: 1.3; letter-spacing: 0.2px;
+  }
+  .cert-slide-issuer {
+    font-size: 0.74rem; color: var(--muted); text-align: center; margin-top: 0.2rem; font-weight: 400;
   }
 
   /* CONTACT */
@@ -507,17 +514,17 @@
     <div class="cert-marquee-container">
       <div class="cert-marquee-track">
         <!-- ORIGINALS -->
-        <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide-img"><img src="certificates/HackerRank_SQL.png" alt="HackerRank SQL"></a>
-        <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide-img"><img src="certificates/OneRoadmap_DataAnalyst.png" alt="OneRoadmap Data Analyst"></a>
-        <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Deloitte_JobSimulation.png" alt="Deloitte Job Simulation"></a>
-        <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide-img"><img src="certificates/GrowthSchool_GenAI.png" alt="Growth School GenAI"></a>
-        <a href="certificates/be10x_AITools.pdf" target="_blank" class="cert-slide-img"><img src="certificates/be10x_AITools.png" alt="be10x AI Tools"></a>
+        <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide-img"><img src="certificates/HackerRank_SQL.png" alt="HackerRank SQL"><div class="cert-slide-title">SQL (Basic & Intermediate)</div><div class="cert-slide-issuer">HackerRank · Apr 2026</div></a>
+        <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide-img"><img src="certificates/OneRoadmap_DataAnalyst.png" alt="OneRoadmap Data Analyst"><div class="cert-slide-title">Data Analyst, Python, SQL, Excel</div><div class="cert-slide-issuer">OneRoadmap · Apr 2026</div></a>
+        <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Deloitte_JobSimulation.png" alt="Deloitte Job Simulation"><div class="cert-slide-title">Data Analytics Job Simulation</div><div class="cert-slide-issuer">Deloitte Australia (Forage)</div></a>
+        <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide-img"><img src="certificates/GrowthSchool_GenAI.png" alt="Growth School GenAI"><div class="cert-slide-title">Generative AI Workshop</div><div class="cert-slide-issuer">Growth School</div></a>
+        <a href="certificates/be10x_AITools.pdf" target="_blank" class="cert-slide-img"><img src="certificates/be10x_AITools.png" alt="be10x AI Tools"><div class="cert-slide-title">AI Tools Workshop</div><div class="cert-slide-issuer">be10x</div></a>
         <!-- DUPLICATES FOR INFINITE LOOPING -->
-        <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide-img"><img src="certificates/HackerRank_SQL.png" alt="HackerRank SQL"></a>
-        <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide-img"><img src="certificates/OneRoadmap_DataAnalyst.png" alt="OneRoadmap Data Analyst"></a>
-        <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Deloitte_JobSimulation.png" alt="Deloitte Job Simulation"></a>
-        <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide-img"><img src="certificates/GrowthSchool_GenAI.png" alt="Growth School GenAI"></a>
-        <a href="certificates/be10x_AITools.pdf" target="_blank" class="cert-slide-img"><img src="certificates/be10x_AITools.png" alt="be10x AI Tools"></a>
+        <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide-img"><img src="certificates/HackerRank_SQL.png" alt="HackerRank SQL"><div class="cert-slide-title">SQL (Basic & Intermediate)</div><div class="cert-slide-issuer">HackerRank · Apr 2026</div></a>
+        <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide-img"><img src="certificates/OneRoadmap_DataAnalyst.png" alt="OneRoadmap Data Analyst"><div class="cert-slide-title">Data Analyst, Python, SQL, Excel</div><div class="cert-slide-issuer">OneRoadmap · Apr 2026</div></a>
+        <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Deloitte_JobSimulation.png" alt="Deloitte Job Simulation"><div class="cert-slide-title">Data Analytics Job Simulation</div><div class="cert-slide-issuer">Deloitte Australia (Forage)</div></a>
+        <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide-img"><img src="certificates/GrowthSchool_GenAI.png" alt="Growth School GenAI"><div class="cert-slide-title">Generative AI Workshop</div><div class="cert-slide-issuer">Growth School</div></a>
+        <a href="certificates/be10x_AITools.pdf" target="_blank" class="cert-slide-img"><img src="certificates/be10x_AITools.png" alt="be10x AI Tools"><div class="cert-slide-title">AI Tools Workshop</div><div class="cert-slide-issuer">be10x</div></a>
       </div>
     </div>
   </div>
