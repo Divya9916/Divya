@@ -142,18 +142,49 @@
   /* SKILLS */
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
   .skill-card {
-    background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
-    padding: 2rem; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
     backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   }
-  .skill-card:hover { border-color: rgba(255,255,255,0.25); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
-  .skill-card-icon { font-size: 1.6rem; margin-bottom: 1rem; opacity: 0.9; }
-  .skill-card-title { font-family: 'DM Sans', sans-serif; font-size: 1.2rem; font-weight: 500; margin-bottom: 1.25rem; color: #fff; letter-spacing: -0.5px; }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-  .tag {
-    padding: 6px 14px; border-radius: 50px; font-size: 0.8rem; font-weight: 500;
-    background: rgba(255, 255, 255, 0.05); color: var(--accent); border: 1px solid rgba(255, 255, 255, 0.1);
+  .skill-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--sk-accent, linear-gradient(90deg, #6ee7b7, #38bdf8));
+    border-radius: 16px 16px 0 0;
+    opacity: 0.9;
   }
+  .skill-card:hover {
+    border-color: rgba(255,255,255,0.22);
+    box-shadow: 0 12px 45px rgba(0,0,0,0.45), 0 0 0 1px rgba(110,231,183,0.08);
+  }
+  .skill-card-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.25rem; }
+  .skill-card-icon {
+    font-size: 1.5rem;
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 10px;
+    background: var(--sk-icon-bg, rgba(110,231,183,0.1));
+    flex-shrink: 0;
+  }
+  .skill-card-title {
+    font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 700;
+    color: #fff; letter-spacing: -0.2px; line-height: 1.3;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tag {
+    padding: 5px 13px; border-radius: 50px; font-size: 0.78rem; font-weight: 500;
+    background: var(--sk-tag-bg, rgba(110,231,183,0.08));
+    color: var(--sk-tag-color, #6ee7b7);
+    border: 1px solid var(--sk-tag-border, rgba(110,231,183,0.2));
+    transition: background 0.2s, transform 0.2s;
+  }
+  .tag:hover { transform: translateY(-2px); background: var(--sk-tag-hover, rgba(110,231,183,0.15)); }
 
   /* EXPERIENCE */
   .exp-card {
@@ -362,58 +393,72 @@
     <div class="section-label">Technical Expertise</div>
     <h2 class="section-title">Skills & <span>Tools</span></h2>
     <div class="skills-grid">
-      <!-- Programming Languages -->
-      <div class="skill-card">
-        <div class="skill-card-icon">🐍</div>
-        <div class="skill-card-title">Programming Languages</div>
+      <!-- Programming Languages — Green -->
+      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#6ee7b7,#34d399);--sk-icon-bg:rgba(110,231,183,0.12);--sk-tag-bg:rgba(110,231,183,0.08);--sk-tag-color:#6ee7b7;--sk-tag-border:rgba(110,231,183,0.25);--sk-tag-hover:rgba(110,231,183,0.18);">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">🐍</div>
+          <div class="skill-card-title">Programming Languages</div>
+        </div>
         <div class="skill-tags">
           <span class="tag">Python</span><span class="tag">SQL</span>
         </div>
       </div>
-      <!-- Databases -->
-      <div class="skill-card">
-        <div class="skill-card-icon">🗄️</div>
-        <div class="skill-card-title">Databases</div>
+      <!-- Databases — Cyan -->
+      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#22d3ee,#06b6d4);--sk-icon-bg:rgba(34,211,238,0.12);--sk-tag-bg:rgba(34,211,238,0.08);--sk-tag-color:#22d3ee;--sk-tag-border:rgba(34,211,238,0.25);--sk-tag-hover:rgba(34,211,238,0.18);">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">🗄️</div>
+          <div class="skill-card-title">Databases</div>
+        </div>
         <div class="skill-tags">
           <span class="tag">MySQL</span>
         </div>
       </div>
-      <!-- Libraries & Frameworks -->
-      <div class="skill-card">
-        <div class="skill-card-icon">📚</div>
-        <div class="skill-card-title">Libraries & Frameworks</div>
+      <!-- Libraries & Frameworks — Purple -->
+      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#a78bfa,#8b5cf6);--sk-icon-bg:rgba(167,139,250,0.12);--sk-tag-bg:rgba(167,139,250,0.08);--sk-tag-color:#a78bfa;--sk-tag-border:rgba(167,139,250,0.25);--sk-tag-hover:rgba(167,139,250,0.18);">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">📚</div>
+          <div class="skill-card-title">Libraries &amp; Frameworks</div>
+        </div>
         <div class="skill-tags">
           <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span>
         </div>
       </div>
-      <!-- Visualization & BI -->
-      <div class="skill-card">
-        <div class="skill-card-icon">📊</div>
-        <div class="skill-card-title">Data Visualization & BI Tools</div>
+      <!-- Data Visualization & BI — Sky Blue -->
+      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#38bdf8,#0ea5e9);--sk-icon-bg:rgba(56,189,248,0.12);--sk-tag-bg:rgba(56,189,248,0.08);--sk-tag-color:#38bdf8;--sk-tag-border:rgba(56,189,248,0.25);--sk-tag-hover:rgba(56,189,248,0.18);">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">📊</div>
+          <div class="skill-card-title">Data Visualization &amp; BI Tools</div>
+        </div>
         <div class="skill-tags">
           <span class="tag">Power BI</span><span class="tag">Microsoft Excel</span><span class="tag">DAX</span>
         </div>
       </div>
-      <!-- Analysis Techniques -->
-      <div class="skill-card">
-        <div class="skill-card-icon">🔍</div>
-        <div class="skill-card-title">Data Analysis Techniques</div>
+      <!-- Data Analysis Techniques — Amber -->
+      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#fbbf24,#f59e0b);--sk-icon-bg:rgba(251,191,36,0.12);--sk-tag-bg:rgba(251,191,36,0.08);--sk-tag-color:#fbbf24;--sk-tag-border:rgba(251,191,36,0.25);--sk-tag-hover:rgba(251,191,36,0.18);">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">🔍</div>
+          <div class="skill-card-title">Data Analysis Techniques</div>
+        </div>
         <div class="skill-tags">
           <span class="tag">Exploratory Data Analysis (EDA)</span><span class="tag">Data Cleaning</span><span class="tag">Data Transformation</span><span class="tag">Statistical Analysis</span>
         </div>
       </div>
-      <!-- Machine Learning -->
-      <div class="skill-card">
-        <div class="skill-card-icon">🤖</div>
-        <div class="skill-card-title">Machine Learning</div>
+      <!-- Machine Learning — Rose -->
+      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#fb7185,#f43f5e);--sk-icon-bg:rgba(251,113,133,0.12);--sk-tag-bg:rgba(251,113,133,0.08);--sk-tag-color:#fb7185;--sk-tag-border:rgba(251,113,133,0.25);--sk-tag-hover:rgba(251,113,133,0.18);">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">🤖</div>
+          <div class="skill-card-title">Machine Learning</div>
+        </div>
         <div class="skill-tags">
           <span class="tag">Regression</span><span class="tag">Classification</span>
         </div>
       </div>
-      <!-- Core Competencies -->
-      <div class="skill-card">
-        <div class="skill-card-icon">💡</div>
-        <div class="skill-card-title">Core Competencies</div>
+      <!-- Core Competencies — Lime -->
+      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#a3e635,#84cc16);--sk-icon-bg:rgba(163,230,53,0.12);--sk-tag-bg:rgba(163,230,53,0.08);--sk-tag-color:#a3e635;--sk-tag-border:rgba(163,230,53,0.25);--sk-tag-hover:rgba(163,230,53,0.18);">
+        <div class="skill-card-header">
+          <div class="skill-card-icon">💡</div>
+          <div class="skill-card-title">Core Competencies</div>
+        </div>
         <div class="skill-tags">
           <span class="tag">Data Storytelling</span><span class="tag">Business Acumen</span><span class="tag">Stakeholder Communication</span>
         </div>
