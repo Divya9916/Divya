@@ -4,27 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Divya Sharma | Data Analyst</title>
-<meta name="description" content="Portfolio of Divya Sharma – Data Analyst with expertise in SQL, Python, Power BI, Excel & Machine Learning. Based in Jodhpur, Rajasthan.">
-<meta name="keywords" content="Data Analyst, SQL, Python, Power BI, Excel, Machine Learning, Divya Sharma, Jodhpur">
+<meta name="description" content="Divya Sharma — Data Analyst from Jodhpur, Rajasthan. Skilled in Python, SQL, Power BI & Excel. Open to opportunities." />
+<meta property="og:title" content="Divya Sharma | Data Analyst Portfolio" />
+<meta property="og:description" content="Detail-oriented Data Analyst with hands-on experience in SQL, Python, Power BI & Excel. View my projects and certifications." />
+<meta property="og:image" content="https://divya9916.github.io/Divya/og-preview.png" />
+<meta property="og:url" content="https://divya9916.github.io/Divya/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Divya Sharma | Data Analyst Portfolio" />
+<meta name="twitter:description" content="Python · SQL · Power BI · Excel — turning data into decisions." />
+<meta name="twitter:image" content="https://divya9916.github.io/Divya/og-preview.png" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --bg:      #070B14;
-    --bg2:     #0C1220;
-    --bg3:     #111827;
+    --bg:      #0F172A;
+    --bg2:     #0B1121;
+    --bg3:     #0F172A;
     --card:    rgba(15, 23, 42, 0.8);
-    --border:  rgba(99, 179, 237, 0.12);
-    --border2: rgba(255,255,255,0.08);
-    --accent:  #63B3ED;   /* professional blue */
-    --accent2: #90CDF4;
-    --green:   #68D391;
-    --purple:  #B794F4;
-    --gold:    #F6E05E;
-    --text:    #F7FAFC;
-    --muted:   #A0AEC0;
-    --muted2:  #718096;
+    --border:  rgba(14, 165, 233, 0.15);
+    --border2: rgba(255, 255, 255, 0.08);
+    --accent:  #0EA5E9;   /* sky blue */
+    --accent2: #6366F1;   /* indigo */
+    --green:   #0EA5E9;   /* replaced with primary */
+    --purple:  #6366F1;   /* replaced with secondary */
+    --gold:    #0EA5E9;   /* replaced with primary */
+    --text:    #F8FAFC;
+    --muted:   #94A3B8;
+    --muted2:  #64748B;
     --radius:  14px;
   }
 
@@ -32,8 +42,8 @@
   body {
     background-color: var(--bg);
     background-image:
-      radial-gradient(ellipse 80% 50% at 20% -10%, rgba(99,179,237,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 50% at 80% 110%, rgba(104,211,145,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse 80% 50% at 20% -10%, rgba(14,165,233,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 110%, rgba(99,102,241,0.04) 0%, transparent 60%);
     background-attachment: fixed;
     color: var(--text);
     font-family: 'Inter', sans-serif;
@@ -210,6 +220,15 @@
   }
   .tag:hover { transform:translateY(-2px); }
 
+  /* ── TOOL CARDS ── */
+  .tool-card {
+    padding:1.5rem; background:var(--card); border:1px solid var(--border);
+    border-radius:var(--radius); transition:transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    backdrop-filter:blur(12px); display:flex; flex-direction:column; align-items:center;
+  }
+  .tool-card:hover { transform:scale(1.05) translateY(-5px); border-color:var(--accent); box-shadow:0 10px 25px rgba(14,165,233,0.3); }
+  .tools-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:1.5rem; text-align:center; margin-top:2rem; }
+
   /* ── EXPERIENCE ── */
   .exp-card {
     background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
@@ -219,10 +238,10 @@
   }
   .exp-card::before {
     content:''; position:absolute; left:0; top:0; bottom:0; width:4px;
-    background:linear-gradient(to bottom, var(--accent), var(--green));
+    background:linear-gradient(to bottom, var(--accent), var(--accent2));
     border-radius:4px 0 0 4px;
   }
-  .exp-card:hover { border-color:rgba(99,179,237,0.25); box-shadow:0 16px 50px rgba(0,0,0,0.45); }
+  .exp-card:hover { border-color:var(--accent); box-shadow:0 16px 50px rgba(0,0,0,0.45); }
   .exp-top { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; margin-bottom:1rem; }
   .exp-company { font-family:'Space Grotesk',sans-serif; font-size:1.35rem; font-weight:700; color:var(--text); }
   .exp-role { font-size:0.92rem; color:var(--accent); font-weight:500; margin-top:0.25rem; }
@@ -245,7 +264,7 @@
     padding:1.75rem; transition:box-shadow 0.3s, border-color 0.3s;
     backdrop-filter:blur(12px); display:flex; flex-direction:column;
   }
-  .project-card:hover { border-color:rgba(99,179,237,0.25); box-shadow:0 12px 40px rgba(0,0,0,0.4); }
+  .project-card:hover { border-color:var(--accent); box-shadow:0 12px 40px rgba(14,165,233,0.1); }
   .project-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; }
   .project-num { font-family:'Space Grotesk',sans-serif; font-size:2rem; font-weight:700; color:var(--muted); opacity: 0.6; line-height:1; }
   .project-github {
@@ -339,6 +358,7 @@
 
   /* ── RESPONSIVE ── */
   @media(max-width:768px) {
+    .tools-grid { grid-template-columns:repeat(2, 1fr); }
     nav { padding:0.9rem 1.25rem; }
     .nav-links { display:none; }
     .nav-cta { display:none; }
@@ -352,20 +372,20 @@
 
 <!-- FLOATING PARTICLES -->
 <div id="bg-particles">
-  <div class="particle" style="width:5px;height:5px;left:5%;background:#63B3ED;animation-duration:20s;animation-delay:0s;"></div>
-  <div class="particle" style="width:4px;height:4px;left:12%;background:#68D391;animation-duration:25s;animation-delay:2s;"></div>
-  <div class="particle" style="width:6px;height:6px;left:22%;background:#B794F4;animation-duration:17s;animation-delay:1s;"></div>
-  <div class="particle" style="width:3px;height:3px;left:31%;background:#63B3ED;animation-duration:22s;animation-delay:4s;"></div>
-  <div class="particle" style="width:5px;height:5px;left:40%;background:#68D391;animation-duration:28s;animation-delay:0.5s;"></div>
-  <div class="particle" style="width:4px;height:4px;left:50%;background:#63B3ED;animation-duration:19s;animation-delay:3s;"></div>
-  <div class="particle" style="width:6px;height:6px;left:59%;background:#B794F4;animation-duration:24s;animation-delay:1.5s;"></div>
-  <div class="particle" style="width:3px;height:3px;left:68%;background:#68D391;animation-duration:21s;animation-delay:6s;"></div>
-  <div class="particle" style="width:5px;height:5px;left:77%;background:#63B3ED;animation-duration:16s;animation-delay:2.5s;"></div>
-  <div class="particle" style="width:4px;height:4px;left:85%;background:#B794F4;animation-duration:26s;animation-delay:0s;"></div>
-  <div class="particle" style="width:3px;height:3px;left:92%;background:#68D391;animation-duration:18s;animation-delay:5s;"></div>
-  <div class="particle" style="width:5px;height:5px;left:8%;background:#63B3ED;animation-duration:30s;animation-delay:7s;"></div>
-  <div class="particle" style="width:4px;height:4px;left:45%;background:#B794F4;animation-duration:23s;animation-delay:8s;"></div>
-  <div class="particle" style="width:6px;height:6px;left:72%;background:#68D391;animation-duration:15s;animation-delay:3.5s;"></div>
+  <div class="particle" style="width:5px;height:5px;left:5%;background:var(--accent);animation-duration:20s;animation-delay:0s;"></div>
+  <div class="particle" style="width:4px;height:4px;left:12%;background:var(--accent2);animation-duration:25s;animation-delay:2s;"></div>
+  <div class="particle" style="width:6px;height:6px;left:22%;background:var(--accent);animation-duration:17s;animation-delay:1s;"></div>
+  <div class="particle" style="width:3px;height:3px;left:31%;background:var(--accent2);animation-duration:22s;animation-delay:4s;"></div>
+  <div class="particle" style="width:5px;height:5px;left:40%;background:var(--accent);animation-duration:28s;animation-delay:0.5s;"></div>
+  <div class="particle" style="width:4px;height:4px;left:50%;background:var(--accent2);animation-duration:19s;animation-delay:3s;"></div>
+  <div class="particle" style="width:6px;height:6px;left:59%;background:var(--accent);animation-duration:24s;animation-delay:1.5s;"></div>
+  <div class="particle" style="width:3px;height:3px;left:68%;background:var(--accent2);animation-duration:21s;animation-delay:6s;"></div>
+  <div class="particle" style="width:5px;height:5px;left:77%;background:var(--accent);animation-duration:16s;animation-delay:2.5s;"></div>
+  <div class="particle" style="width:4px;height:4px;left:85%;background:var(--accent2);animation-duration:26s;animation-delay:0s;"></div>
+  <div class="particle" style="width:3px;height:3px;left:92%;background:var(--accent);animation-duration:18s;animation-delay:5s;"></div>
+  <div class="particle" style="width:5px;height:5px;left:8%;background:var(--accent2);animation-duration:30s;animation-delay:7s;"></div>
+  <div class="particle" style="width:4px;height:4px;left:45%;background:var(--accent);animation-duration:23s;animation-delay:8s;"></div>
+  <div class="particle" style="width:6px;height:6px;left:72%;background:var(--accent2);animation-duration:15s;animation-delay:3.5s;"></div>
 </div>
 
 <!-- NAV -->
@@ -398,6 +418,24 @@
   <div class="scroll-indicator"><div class="scroll-line"></div></div>
 </section>
 
+<!-- ABOUT ME -->
+<section id="about-me">
+  <div class="section-inner" style="display:flex; flex-wrap:wrap; gap:3rem; align-items:center;">
+    <div style="flex:1; min-width:300px;">
+      <div class="section-eyebrow">Discover My Journey</div>
+      <h2 class="section-title">About <em>Me</em></h2>
+      <p style="color:var(--muted); font-size:1.05rem; line-height:1.8;">
+        My journey into data began through finance. After completing my MBA in Finance &amp; Marketing and a B.Com in Banking &amp; Financial Economics, I realized the most powerful skill in business wasn't just understanding numbers — it was communicating what they mean. That curiosity led me to data analytics, where I now work with Python, SQL, Power BI, and Excel to turn messy datasets into clear, actionable stories. I'm based in Jodhpur, Rajasthan, and actively looking for Data Analyst roles where I can bring both financial domain knowledge and technical skills to the table.
+      </p>
+    </div>
+    <div style="flex-shrink:0; width:220px; height:220px; border-radius:50%; border:3px solid var(--accent); padding:5px; background:rgba(14,165,233,0.1); display:flex; justify-content:center; align-items:center;">
+      <div style="width:100%; height:100%; border-radius:50%; background:var(--card); display:flex; justify-content:center; align-items:center; color:var(--muted); font-size:0.8rem; text-align:center;">
+        [Profile Photo Slot<br>200x200]
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SKILLS -->
 <section id="skills" style="background:var(--bg2);">
   <div class="section-inner">
@@ -405,41 +443,71 @@
     <h2 class="section-title">Skills &amp; <em>Tools</em></h2>
     <div class="skills-grid">
       <!-- Programming Languages -->
-      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#63B3ED,#4299E1);--sk-icon-bg:rgba(99,179,237,0.12);--sk-tag-bg:rgba(99,179,237,0.08);--sk-tag-color:#63B3ED;--sk-tag-border:rgba(99,179,237,0.22);">
-        <div class="skill-card-header"><div class="skill-card-icon">🐍</div><div class="skill-card-title">Programming Languages</div></div>
+      <div class="skill-card" style="--sk-accent:var(--accent);--sk-icon-bg:rgba(14,165,233,0.1);--sk-tag-bg:rgba(14,165,233,0.05);--sk-tag-color:var(--accent);--sk-tag-border:rgba(14,165,233,0.2);">
+        <div class="skill-card-header"><div class="skill-card-icon"><i class="fa-solid fa-code"></i></div><div class="skill-card-title">Programming Languages</div></div>
         <div class="skill-tags"><span class="tag">Python</span><span class="tag">SQL</span></div>
       </div>
       <!-- Databases -->
-      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#22d3ee,#06b6d4);--sk-icon-bg:rgba(34,211,238,0.12);--sk-tag-bg:rgba(34,211,238,0.08);--sk-tag-color:#22d3ee;--sk-tag-border:rgba(34,211,238,0.22);">
-        <div class="skill-card-header"><div class="skill-card-icon">🗄️</div><div class="skill-card-title">Databases</div></div>
+      <div class="skill-card" style="--sk-accent:var(--accent);--sk-icon-bg:rgba(14,165,233,0.1);--sk-tag-bg:rgba(14,165,233,0.05);--sk-tag-color:var(--accent);--sk-tag-border:rgba(14,165,233,0.2);">
+        <div class="skill-card-header"><div class="skill-card-icon"><i class="fa-solid fa-database"></i></div><div class="skill-card-title">Databases</div></div>
         <div class="skill-tags"><span class="tag">MySQL</span></div>
       </div>
       <!-- Libraries -->
-      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#B794F4,#9F7AEA);--sk-icon-bg:rgba(183,148,244,0.12);--sk-tag-bg:rgba(183,148,244,0.08);--sk-tag-color:#B794F4;--sk-tag-border:rgba(183,148,244,0.22);">
-        <div class="skill-card-header"><div class="skill-card-icon">📚</div><div class="skill-card-title">Libraries &amp; Frameworks</div></div>
+      <div class="skill-card" style="--sk-accent:var(--accent2);--sk-icon-bg:rgba(99,102,241,0.1);--sk-tag-bg:rgba(99,102,241,0.05);--sk-tag-color:var(--accent2);--sk-tag-border:rgba(99,102,241,0.2);">
+        <div class="skill-card-header"><div class="skill-card-icon"><i class="fa-solid fa-layer-group"></i></div><div class="skill-card-title">Libraries &amp; Frameworks</div></div>
         <div class="skill-tags"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span></div>
       </div>
       <!-- Visualization & BI -->
-      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#68D391,#38A169);--sk-icon-bg:rgba(104,211,145,0.12);--sk-tag-bg:rgba(104,211,145,0.08);--sk-tag-color:#68D391;--sk-tag-border:rgba(104,211,145,0.22);">
-        <div class="skill-card-header"><div class="skill-card-icon">📊</div><div class="skill-card-title">Data Visualization &amp; BI Tools</div></div>
+      <div class="skill-card" style="--sk-accent:var(--accent);--sk-icon-bg:rgba(14,165,233,0.1);--sk-tag-bg:rgba(14,165,233,0.05);--sk-tag-color:var(--accent);--sk-tag-border:rgba(14,165,233,0.2);">
+        <div class="skill-card-header"><div class="skill-card-icon"><i class="fa-solid fa-chart-bar"></i></div><div class="skill-card-title">Data Visualization &amp; BI Tools</div></div>
         <div class="skill-tags"><span class="tag">Power BI</span><span class="tag">Microsoft Excel</span><span class="tag">DAX</span></div>
       </div>
       <!-- Analysis Techniques -->
-      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#F6E05E,#ECC94B);--sk-icon-bg:rgba(246,224,94,0.12);--sk-tag-bg:rgba(246,224,94,0.08);--sk-tag-color:#F6E05E;--sk-tag-border:rgba(246,224,94,0.22);">
-        <div class="skill-card-header"><div class="skill-card-icon">🔍</div><div class="skill-card-title">Data Analysis Techniques</div></div>
+      <div class="skill-card" style="--sk-accent:var(--accent);--sk-icon-bg:rgba(14,165,233,0.1);--sk-tag-bg:rgba(14,165,233,0.05);--sk-tag-color:var(--accent);--sk-tag-border:rgba(14,165,233,0.2);">
+        <div class="skill-card-header"><div class="skill-card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div><div class="skill-card-title">Data Analysis Techniques</div></div>
         <div class="skill-tags"><span class="tag">EDA</span><span class="tag">Data Cleaning</span><span class="tag">Data Transformation</span><span class="tag">Statistical Analysis</span></div>
       </div>
       <!-- Machine Learning -->
-      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#FC8181,#F56565);--sk-icon-bg:rgba(252,129,129,0.12);--sk-tag-bg:rgba(252,129,129,0.08);--sk-tag-color:#FC8181;--sk-tag-border:rgba(252,129,129,0.22);">
-        <div class="skill-card-header"><div class="skill-card-icon">🤖</div><div class="skill-card-title">Machine Learning</div></div>
+      <div class="skill-card" style="--sk-accent:var(--accent2);--sk-icon-bg:rgba(99,102,241,0.1);--sk-tag-bg:rgba(99,102,241,0.05);--sk-tag-color:var(--accent2);--sk-tag-border:rgba(99,102,241,0.2);">
+        <div class="skill-card-header"><div class="skill-card-icon"><i class="fa-solid fa-brain"></i></div><div class="skill-card-title">Machine Learning</div></div>
         <div class="skill-tags"><span class="tag">Regression</span><span class="tag">Classification</span></div>
       </div>
       <!-- Soft Skills -->
-      <div class="skill-card" style="--sk-accent:linear-gradient(90deg,#F6AD55,#ED8936);--sk-icon-bg:rgba(246,173,85,0.12);--sk-tag-bg:rgba(246,173,85,0.08);--sk-tag-color:#F6AD55;--sk-tag-border:rgba(246,173,85,0.22);">
-        <div class="skill-card-header"><div class="skill-card-icon">🧠</div><div class="skill-card-title">Soft Skills</div></div>
+      <div class="skill-card" style="--sk-accent:var(--accent2);--sk-icon-bg:rgba(99,102,241,0.1);--sk-tag-bg:rgba(99,102,241,0.05);--sk-tag-color:var(--accent2);--sk-tag-border:rgba(99,102,241,0.2);">
+        <div class="skill-card-header"><div class="skill-card-icon"><i class="fa-solid fa-lightbulb"></i></div><div class="skill-card-title">Soft Skills</div></div>
         <div class="skill-tags"><span class="tag">Analytical Thinking</span><span class="tag">Problem Solving</span><span class="tag">Data Storytelling</span><span class="tag">Time Management</span></div>
       </div>
 
+    </div>
+
+    <!-- TOOLS I USE -->
+    <div class="section-eyebrow" style="margin-top:5rem; justify-content:center;">Daily Workflow</div>
+    <h2 class="section-title" style="text-align:center; margin-bottom:2rem;">Tools I <em>Use</em></h2>
+    <div class="tools-grid">
+        <div class="tool-card">
+            <i class="devicon-python-plain" style="font-size:3rem; color:var(--accent); margin-bottom:0.75rem;"></i><div style="font-weight:600; font-size:1rem; color:var(--text);">Python</div>
+        </div>
+        <div class="tool-card">
+            <i class="devicon-mysql-plain" style="font-size:3rem; color:var(--accent); margin-bottom:0.75rem;"></i><div style="font-weight:600; font-size:1rem; color:var(--text);">MySQL</div>
+        </div>
+        <div class="tool-card">
+            <i class="fa-solid fa-chart-column" style="font-size:3rem; color:var(--accent); margin-bottom:0.75rem;"></i><div style="font-weight:600; font-size:1rem; color:var(--text);">Power BI</div>
+        </div>
+        <div class="tool-card">
+            <i class="fa-solid fa-file-excel" style="font-size:3rem; color:var(--accent); margin-bottom:0.75rem;"></i><div style="font-weight:600; font-size:1rem; color:var(--text);">Excel</div>
+        </div>
+        <div class="tool-card">
+            <i class="devicon-pandas-original" style="font-size:3rem; color:var(--accent); margin-bottom:0.75rem;"></i><div style="font-weight:600; font-size:1rem; color:var(--text);">Pandas</div>
+        </div>
+        <div class="tool-card">
+            <i class="devicon-numpy-original" style="font-size:3rem; color:var(--accent); margin-bottom:0.75rem;"></i><div style="font-weight:600; font-size:1rem; color:var(--text);">NumPy</div>
+        </div>
+        <div class="tool-card">
+            <i class="fa-solid fa-robot" style="font-size:3rem; color:var(--accent); margin-bottom:0.75rem;"></i><div style="font-weight:600; font-size:1rem; color:var(--text);">Scikit-learn</div>
+        </div>
+        <div class="tool-card">
+            <i class="fa-solid fa-chart-line" style="font-size:3rem; color:var(--accent); margin-bottom:0.75rem;"></i><div style="font-weight:600; font-size:1rem; color:var(--text);">Matplotlib</div>
+        </div>
     </div>
   </div>
 </section>
@@ -555,35 +623,77 @@
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
+<!-- LICENSES & CERTIFICATIONS -->
 <section id="certifications">
-  <div class="section-inner" style="padding-bottom: 0;">
+  <div class="section-inner">
     <div class="section-eyebrow">Professional Development</div>
     <h2 class="section-title">Licenses &amp; <em>Certifications</em></h2>
-  </div>
-  <div class="cert-marquee-container">
-      <div class="cert-marquee-track">
-        <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide-img"><img src="certificates/HackerRank_SQL.png" alt="HackerRank SQL Basic"><div class="cert-slide-title">SQL (Basic)</div><div class="cert-slide-issuer">HackerRank</div></a>
-        <a href="certificates/sql_intermediate certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/sql_intermediate certificate.png" alt="HackerRank SQL Intermediate"><div class="cert-slide-title">SQL (Intermediate)</div><div class="cert-slide-issuer">HackerRank</div></a>
-        <a href="certificates/Excel-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Excel-Certificate.png" alt="Excel Certificate"><div class="cert-slide-title">Excel</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/SQL-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/SQL-Certificate.png" alt="SQL Certificate"><div class="cert-slide-title">SQL</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/Python-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Python-Certificate.png" alt="Python Certificate"><div class="cert-slide-title">Python</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide-img"><img src="certificates/OneRoadmap_DataAnalyst.png" alt="OneRoadmap Data Analyst"><div class="cert-slide-title">Data Analyst</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Deloitte_JobSimulation.png" alt="Deloitte Job Simulation"><div class="cert-slide-title">Data Analytics Job Simulation</div><div class="cert-slide-issuer">Deloitte Australia (Forage)</div></a>
-        <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide-img"><img src="certificates/GrowthSchool_GenAI.png" alt="Growth School GenAI"><div class="cert-slide-title">Generative AI Workshop</div><div class="cert-slide-issuer">Growth School</div></a>
-        <a href="certificates/be10x_AITools.pdf" target="_blank" class="cert-slide-img"><img src="certificates/be10x_AITools.png" alt="be10x AI Tools"><div class="cert-slide-title">AI Tools Workshop</div><div class="cert-slide-issuer">be10x</div></a>
-        <!-- DUPLICATES FOR INFINITE LOOPING -->
-        <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide-img"><img src="certificates/HackerRank_SQL.png" alt="HackerRank SQL Basic"><div class="cert-slide-title">SQL (Basic)</div><div class="cert-slide-issuer">HackerRank</div></a>
-        <a href="certificates/sql_intermediate certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/sql_intermediate certificate.png" alt="HackerRank SQL Intermediate"><div class="cert-slide-title">SQL (Intermediate)</div><div class="cert-slide-issuer">HackerRank</div></a>
-        <a href="certificates/Excel-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Excel-Certificate.png" alt="Excel Certificate"><div class="cert-slide-title">Excel</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/SQL-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/SQL-Certificate.png" alt="SQL Certificate"><div class="cert-slide-title">SQL</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/Python-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Python-Certificate.png" alt="Python Certificate"><div class="cert-slide-title">Python</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide-img"><img src="certificates/OneRoadmap_DataAnalyst.png" alt="OneRoadmap Data Analyst"><div class="cert-slide-title">Data Analyst</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Deloitte_JobSimulation.png" alt="Deloitte Job Simulation"><div class="cert-slide-title">Data Analytics Job Simulation</div><div class="cert-slide-issuer">Deloitte Australia (Forage)</div></a>
-        <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide-img"><img src="certificates/GrowthSchool_GenAI.png" alt="Growth School GenAI"><div class="cert-slide-title">Generative AI Workshop</div><div class="cert-slide-issuer">Growth School</div></a>
-        <a href="certificates/be10x_AITools.pdf" target="_blank" class="cert-slide-img"><img src="certificates/be10x_AITools.png" alt="be10x AI Tools"><div class="cert-slide-title">AI Tools Workshop</div><div class="cert-slide-issuer">be10x</div></a>
-      </div>
+
+    <!-- TIER 1: Featured -->
+    <div style="margin-bottom: 3rem;">
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.1rem; color:var(--accent); margin-bottom:1.5rem; text-transform:uppercase; letter-spacing:1px;">Featured Certification</h3>
+        <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="exp-card" style="display:block; text-decoration:none; padding:2rem; border:2px solid var(--accent); background:rgba(14,165,233,0.05);">
+            <div style="display:flex; align-items:center; gap:1.5rem;">
+                <div style="font-size:3rem; color:var(--accent);"><i class="fa-solid fa-award"></i></div>
+                <div>
+                    <h4 style="font-size:1.4rem; color:var(--text); margin-bottom:0.5rem;">Data Analytics Job Simulation</h4>
+                    <p style="color:var(--muted); font-size:1rem; margin-bottom:0.5rem;">Deloitte Australia (via Forage)</p>
+                    <p style="color:var(--accent2); font-size:0.9rem;">Industry simulation by Deloitte Australia via Forage — data analysis &amp; forensic technology.</p>
+                </div>
+            </div>
+        </a>
     </div>
+
+    <!-- TIER 2: Technical Certifications -->
+    <div style="margin-bottom: 3rem;">
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.1rem; color:var(--accent); margin-bottom:1.5rem; text-transform:uppercase; letter-spacing:1px;">Technical Certifications</h3>
+        <div class="projects-grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));">
+            <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="project-card" style="padding:1.5rem; text-decoration:none;">
+                <div style="font-size:1.5rem; color:var(--accent2); margin-bottom:1rem;"><i class="fa-solid fa-certificate"></i></div>
+                <div class="project-title" style="font-size:1rem; margin-bottom:0.25rem;">SQL (Basic)</div>
+                <div style="font-size:0.8rem; color:var(--muted);">HackerRank</div>
+            </a>
+            <a href="certificates/sql_intermediate certificate.pdf" target="_blank" class="project-card" style="padding:1.5rem; text-decoration:none;">
+                <div style="font-size:1.5rem; color:var(--accent2); margin-bottom:1rem;"><i class="fa-solid fa-certificate"></i></div>
+                <div class="project-title" style="font-size:1rem; margin-bottom:0.25rem;">SQL (Intermediate)</div>
+                <div style="font-size:0.8rem; color:var(--muted);">HackerRank</div>
+            </a>
+            <a href="certificates/Excel-Certificate.pdf" target="_blank" class="project-card" style="padding:1.5rem; text-decoration:none;">
+                <div style="font-size:1.5rem; color:var(--accent2); margin-bottom:1rem;"><i class="fa-solid fa-certificate"></i></div>
+                <div class="project-title" style="font-size:1rem; margin-bottom:0.25rem;">Excel</div>
+                <div style="font-size:0.8rem; color:var(--muted);">OneRoadmap</div>
+            </a>
+            <a href="certificates/SQL-Certificate.pdf" target="_blank" class="project-card" style="padding:1.5rem; text-decoration:none;">
+                <div style="font-size:1.5rem; color:var(--accent2); margin-bottom:1rem;"><i class="fa-solid fa-certificate"></i></div>
+                <div class="project-title" style="font-size:1rem; margin-bottom:0.25rem;">SQL</div>
+                <div style="font-size:0.8rem; color:var(--muted);">OneRoadmap</div>
+            </a>
+            <a href="certificates/Python-Certificate.pdf" target="_blank" class="project-card" style="padding:1.5rem; text-decoration:none;">
+                <div style="font-size:1.5rem; color:var(--accent2); margin-bottom:1rem;"><i class="fa-solid fa-certificate"></i></div>
+                <div class="project-title" style="font-size:1rem; margin-bottom:0.25rem;">Python</div>
+                <div style="font-size:0.8rem; color:var(--muted);">OneRoadmap</div>
+            </a>
+            <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="project-card" style="padding:1.5rem; text-decoration:none;">
+                <div style="font-size:1.5rem; color:var(--accent2); margin-bottom:1rem;"><i class="fa-solid fa-certificate"></i></div>
+                <div class="project-title" style="font-size:1rem; margin-bottom:0.25rem;">Data Analyst</div>
+                <div style="font-size:0.8rem; color:var(--muted);">OneRoadmap</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- TIER 3: Workshops -->
+    <div>
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.1rem; color:var(--accent); margin-bottom:1.5rem; text-transform:uppercase; letter-spacing:1px;">Workshops</h3>
+        <div style="display:flex; flex-wrap:wrap; gap:1rem;">
+            <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="tag" style="background:rgba(99,102,241,0.1); color:var(--accent2); border-color:rgba(99,102,241,0.2); text-decoration:none; padding:8px 16px;">
+                <i class="fa-solid fa-chalkboard-user" style="margin-right:8px;"></i> Generative AI Workshop – Growth School
+            </a>
+            <a href="certificates/be10x_AITools.pdf" target="_blank" class="tag" style="background:rgba(99,102,241,0.1); color:var(--accent2); border-color:rgba(99,102,241,0.2); text-decoration:none; padding:8px 16px;">
+                <i class="fa-solid fa-microchip" style="margin-right:8px;"></i> AI Tools Workshop – be10x
+            </a>
+        </div>
+    </div>
+  </div>
 </section>
 
 <!-- ACADEMIC PORTFOLIO -->
