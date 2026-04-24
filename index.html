@@ -322,6 +322,122 @@
   .academic-title { font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:700; color:var(--text); margin-bottom:0.75rem; }
   .academic-desc { font-size:0.95rem; color:var(--muted); line-height:1.75; margin-bottom:2rem; }
 
+  /* ── FEATURED CERT ── */
+  .featured-cert-card {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(99, 102, 241, 0.15));
+    border: 1px solid rgba(14, 165, 233, 0.3);
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+  .featured-cert-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 60px rgba(14, 165, 233, 0.4);
+  }
+  .featured-cert-card.primary-specialization {
+    border: 1px solid rgba(14, 165, 233, 0.5);
+    background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.2), transparent),
+                linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(11, 17, 33, 0.9));
+  }
+  .featured-tech-stack {
+    display: flex; gap: 0.6rem; margin-bottom: 1.25rem;
+  }
+  .tech-pill {
+    background: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.3);
+    color: var(--accent);
+    padding: 3px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .verfied-badge {
+    background: linear-gradient(135deg, #0EA5E9, #6366F1);
+    color: white;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+    font-weight: 800 !important;
+  }
+  .featured-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: pulse 2s infinite;
+  }
+  .featured-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .featured-text { flex: 1; }
+  .featured-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+  .featured-issuer {
+    font-size: 1rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .featured-desc {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+  .featured-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--text);
+    color: var(--bg);
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .featured-btn:hover {
+    background: var(--accent);
+    color: var(--text);
+    transform: scale(1.05);
+  }
+  .featured-icon-box {
+    font-size: 5rem;
+    color: var(--accent);
+    opacity: 0.2;
+    transform: rotate(15deg);
+  }
+  @media (max-width: 768px) {
+    .featured-content { flex-direction: column; text-align: center; }
+    .featured-icon-box { position: absolute; bottom: -20px; right: -10px; font-size: 8rem; opacity: 0.1; }
+    .featured-badge { position: static; display: inline-flex; margin-bottom: 1.5rem; }
+    .featured-desc { margin-left: auto; margin-right: auto; }
+  }
+
   /* ── CONTACT ── */
   .contact-card {
     background:var(--card); border:1px solid var(--border); border-radius:20px;
@@ -610,13 +726,39 @@
     <div class="section-eyebrow">Professional Development</div>
     <h2 class="section-title">Licenses &amp; <em>Certifications</em></h2>
   </div>
+
+  <!-- FEATURED CERTIFICATION -->
+  <div class="section-inner" style="padding-top: 2rem; padding-bottom: 3rem;">
+    <div class="featured-cert-card primary-specialization">
+      <div class="featured-badge verfied-badge"><i class="fa-solid fa-circle-check"></i> Core Specialization</div>
+      <div class="featured-content">
+        <div class="featured-text">
+          <h3 class="featured-title">Data Analytics Mentorship Program</h3>
+          <div class="featured-tech-stack">
+            <span class="tech-pill">Advance Excel</span>
+            <span class="tech-pill">SQL</span>
+            <span class="tech-pill">Power BI</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Machine Learning</span>
+          </div>
+          <p class="featured-issuer">WsCube Tech · 6-Month Intensive · Grade: A+</p>
+          <p class="featured-desc">A deep-dive mentorship covering the complete Data Analyst lifecycle. Completed with an <strong>A+ Grade</strong>, focused on data engineering, predictive modeling, and strategic visualization.</p>
+          <a href="certificates/WsCubeTech_Mentorship.pdf" target="_blank" class="featured-btn">View Certificate (A+) <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="featured-icon-box">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="cert-marquee-container">
       <div class="cert-marquee-track">
         <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide-img"><img src="certificates/HackerRank_SQL.png" alt="HackerRank SQL Basic"><div class="cert-slide-title">SQL (Basic)</div><div class="cert-slide-issuer">HackerRank</div></a>
         <a href="certificates/sql_intermediate certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/sql_intermediate certificate.png" alt="HackerRank SQL Intermediate"><div class="cert-slide-title">SQL (Intermediate)</div><div class="cert-slide-issuer">HackerRank</div></a>
-        <a href="certificates/Excel-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Excel-Certificate.png" alt="Excel Certificate"><div class="cert-slide-title">Excel</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/SQL-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/SQL-Certificate.png" alt="SQL Certificate"><div class="cert-slide-title">SQL</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/Python-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Python-Certificate.png" alt="Python Certificate"><div class="cert-slide-title">Python</div><div class="cert-slide-issuer">OneRoadmap</div></a>
+        <a href="certificates/Excel-Certificate_OneRoadMap.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Excel-Certificate.png" alt="Excel Certificate"><div class="cert-slide-title">Excel</div><div class="cert-slide-issuer">OneRoadmap</div></a>
+        <a href="certificates/SQL-Certificate_OneRoadMap.pdf" target="_blank" class="cert-slide-img"><img src="certificates/SQL-Certificate.png" alt="SQL Certificate"><div class="cert-slide-title">SQL</div><div class="cert-slide-issuer">OneRoadmap</div></a>
+        <a href="certificates/Python-Certificate_OneRoadMap.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Python-Certificate.png" alt="Python Certificate"><div class="cert-slide-title">Python</div><div class="cert-slide-issuer">OneRoadmap</div></a>
         <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide-img"><img src="certificates/OneRoadmap_DataAnalyst.png" alt="OneRoadmap Data Analyst"><div class="cert-slide-title">Data Analyst</div><div class="cert-slide-issuer">OneRoadmap</div></a>
         <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Deloitte_JobSimulation.png" alt="Deloitte Job Simulation"><div class="cert-slide-title">Data Analytics Job Simulation</div><div class="cert-slide-issuer">Deloitte Australia (Forage)</div></a>
         <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide-img"><img src="certificates/GrowthSchool_GenAI.png" alt="Growth School GenAI"><div class="cert-slide-title">Generative AI Workshop</div><div class="cert-slide-issuer">Growth School</div></a>
@@ -624,9 +766,9 @@
         <!-- DUPLICATES FOR INFINITE LOOPING -->
         <a href="certificates/HackerRank_SQL.pdf" target="_blank" class="cert-slide-img"><img src="certificates/HackerRank_SQL.png" alt="HackerRank SQL Basic"><div class="cert-slide-title">SQL (Basic)</div><div class="cert-slide-issuer">HackerRank</div></a>
         <a href="certificates/sql_intermediate certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/sql_intermediate certificate.png" alt="HackerRank SQL Intermediate"><div class="cert-slide-title">SQL (Intermediate)</div><div class="cert-slide-issuer">HackerRank</div></a>
-        <a href="certificates/Excel-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Excel-Certificate.png" alt="Excel Certificate"><div class="cert-slide-title">Excel</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/SQL-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/SQL-Certificate.png" alt="SQL Certificate"><div class="cert-slide-title">SQL</div><div class="cert-slide-issuer">OneRoadmap</div></a>
-        <a href="certificates/Python-Certificate.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Python-Certificate.png" alt="Python Certificate"><div class="cert-slide-title">Python</div><div class="cert-slide-issuer">OneRoadmap</div></a>
+        <a href="certificates/Excel-Certificate_OneRoadMap.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Excel-Certificate.png" alt="Excel Certificate"><div class="cert-slide-title">Excel</div><div class="cert-slide-issuer">OneRoadmap</div></a>
+        <a href="certificates/SQL-Certificate_OneRoadMap.pdf" target="_blank" class="cert-slide-img"><img src="certificates/SQL-Certificate.png" alt="SQL Certificate"><div class="cert-slide-title">SQL</div><div class="cert-slide-issuer">OneRoadmap</div></a>
+        <a href="certificates/Python-Certificate_OneRoadMap.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Python-Certificate.png" alt="Python Certificate"><div class="cert-slide-title">Python</div><div class="cert-slide-issuer">OneRoadmap</div></a>
         <a href="certificates/OneRoadmap_DataAnalyst.pdf" target="_blank" class="cert-slide-img"><img src="certificates/OneRoadmap_DataAnalyst.png" alt="OneRoadmap Data Analyst"><div class="cert-slide-title">Data Analyst</div><div class="cert-slide-issuer">OneRoadmap</div></a>
         <a href="certificates/Deloitte_JobSimulation.pdf" target="_blank" class="cert-slide-img"><img src="certificates/Deloitte_JobSimulation.png" alt="Deloitte Job Simulation"><div class="cert-slide-title">Data Analytics Job Simulation</div><div class="cert-slide-issuer">Deloitte Australia (Forage)</div></a>
         <a href="certificates/GrowthSchool_GenAI.pdf" target="_blank" class="cert-slide-img"><img src="certificates/GrowthSchool_GenAI.png" alt="Growth School GenAI"><div class="cert-slide-title">Generative AI Workshop</div><div class="cert-slide-issuer">Growth School</div></a>
