@@ -982,7 +982,7 @@ document.querySelectorAll('.skill-card, .project-card, .edu-card, .exp-card, .ac
   if(!canvas) return;
   const ctx = canvas.getContext('2d');
   let particles = [];
-  const particleCount = 150;
+  const particleCount = 450; // Increased density
 
   function init() {
     canvas.width = window.innerWidth;
@@ -996,25 +996,36 @@ document.querySelectorAll('.skill-card, .project-card, .edu-card, .exp-card, .ac
     reset() {
       this.x = Math.random() * canvas.width;
       this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 1.5 + 0.2;
-      this.speed = Math.random() * 0.4 + 0.1;
+      this.size = Math.random() * 1.5 + 0.1;
+      this.isSparkle = Math.random() > 0.4;
+      this.speed = this.isSparkle ? (Math.random() * 0.3 + 0.1) : 0;
       this.opacity = Math.random();
       this.fade = Math.random() * 0.015 + 0.005;
       this.dir = Math.random() > 0.5 ? 1 : -1;
-      this.color = Math.random() > 0.7 ? '#3b82f6' : '#ffffff';
+      this.color = Math.random() > 0.8 ? '#3b82f6' : '#ffffff';
+      this.glow = Math.random() > 0.6; // 40% chance of a glowing star
     }
     update() {
-      this.y -= this.speed;
-      if(this.y < -10) this.y = canvas.height + 10;
+      if(this.isSparkle) {
+        this.y -= this.speed;
+        if(this.y < -10) this.y = canvas.height + 10;
+      }
       this.opacity += this.fade * this.dir;
       if(this.opacity > 1 || this.opacity < 0.1) this.dir *= -1;
     }
     draw() {
       ctx.globalAlpha = Math.max(0, this.opacity);
+      if(this.glow) {
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = this.color;
+      } else {
+        ctx.shadowBlur = 0;
+      }
       ctx.fillStyle = this.color;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
+      ctx.shadowBlur = 0; // Reset for next particle
     }
   }
 
