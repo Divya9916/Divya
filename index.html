@@ -48,10 +48,10 @@
     line-height: 1.6;
   }
 
-  /* ── SPARKLES CANVAS ── */
   #sparkles-canvas {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    z-index: 0; pointer-events: none;
+    z-index: -1; pointer-events: none;
+    background: #000;
   }
 
   /* ── BACKGROUND GLOWS ── */
@@ -186,6 +186,7 @@
   @keyframes scrollLine { 0%{opacity:0;transform:scaleY(0);transform-origin:top} 50%{opacity:1;transform:scaleY(1)} 100%{opacity:0;transform:scaleY(1);transform-origin:bottom} }
 
   /* ── SECTIONS COMMON ── */
+  section { background: transparent !important; position: relative; z-index: 1; }
   .section-inner { max-width:1120px; margin:0 auto; padding:6rem 3rem; }
   .section-eyebrow {
     font-size:0.75rem; text-transform:uppercase; letter-spacing:3px;
@@ -829,7 +830,7 @@
 </section>
 
 <!-- EDUCATION -->
-<section id="education" style="background:var(--bg2);">
+<section id="education">
   <div class="section-inner" style="padding-top: 6rem; padding-bottom: 6rem;">
     <div class="section-eyebrow">Academic Background</div>
     <h2 class="section-title">My <em>Education</em></h2>
@@ -1016,10 +1017,8 @@ document.querySelectorAll('.skill-card, .project-card, .edu-card, .exp-card, .ac
     draw() {
       ctx.globalAlpha = Math.max(0, this.opacity);
       if(this.glow) {
-        ctx.shadowBlur = 12;
+        ctx.shadowBlur = 15;
         ctx.shadowColor = this.color;
-      } else {
-        ctx.shadowBlur = 0;
       }
       ctx.fillStyle = this.color;
       ctx.beginPath();
