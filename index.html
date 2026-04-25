@@ -519,26 +519,6 @@
   }
   .contact-link:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-3px); background:rgba(14,165,233,0.06); }
 
-  .contact-form-inner {
-    max-width: 600px; margin: 0 auto; text-align: left;
-    background: rgba(255,255,255,0.02); padding: 2.5rem; border-radius: 18px; border: 1px solid var(--border);
-  }
-  .form-group { margin-bottom:1.5rem; }
-  .form-group label { display:block; font-size:0.88rem; color:var(--muted); margin-bottom:0.6rem; font-weight:500; letter-spacing:0.5px; }
-  .form-input {
-    width:100%; padding:16px 20px; border-radius:14px; background:rgba(255,255,255,0.03); border:1px solid var(--border2);
-    color:var(--text); font-family:inherit; font-size:0.95rem; transition:all 0.3s;
-  }
-  .form-input:focus { outline:none; border-color:var(--accent); background:rgba(255,255,255,0.07); box-shadow:0 0 20px rgba(14,165,233,0.15); }
-  
-  .btn-submit {
-    width:100%; padding:18px; border-radius:14px; border:none;
-    background:linear-gradient(135deg, #63B3ED, #4299E1); color:#fff;
-    font-weight:700; font-size:1.05rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.75rem;
-    transition:all 0.4s cubic-bezier(0.23, 1, 0.32, 1); box-shadow:0 8px 25px rgba(99,179,237,0.3);
-  }
-  .btn-submit:hover { transform:translateY(-3px); box-shadow:0 12px 35px rgba(99,179,237,0.5); opacity:0.95; }
-  .btn-submit i { font-size:0.9rem; transition:transform 0.3s; }
   .btn-submit:hover i { transform:translateX(5px) rotate(-15deg); }
 
   /* ── FOOTER ── */
@@ -943,25 +923,6 @@
         <a href="tel:+918769877718" class="contact-link"><i class="fa-solid fa-phone"></i> +91-8769877718</a>
       </div>
 
-      <div class="contact-form-inner">
-        <form action="https://formspree.io/f/divya649sharma99@gmail.com" method="POST">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="email@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" class="form-input" rows="4" placeholder="Your message here..." required style="resize:none;"></textarea>
-          </div>
-          <button type="submit" class="btn-submit">
-            Send Message <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
     </div>
   </div>
 </section>
