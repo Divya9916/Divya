@@ -552,6 +552,7 @@
   /* ── ANIMATIONS ── */
   @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
   @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.2)} }
+  @keyframes twinkle { 0%, 100% { opacity: 0.1; } 50% { opacity: 0.4; } }
 
   /* ── RESPONSIVE ── */
   @media(max-width:768px) {
@@ -997,7 +998,7 @@ window.addEventListener('scroll', () => {
   if(!canvas) return;
   const ctx = canvas.getContext('2d');
   let particles = [];
-  const particleCount = 600;
+  const particleCount = 60;
 
   function init() {
     canvas.width = window.innerWidth;
@@ -1011,10 +1012,12 @@ window.addEventListener('scroll', () => {
     reset() {
       this.x = Math.random() * canvas.width;
       this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 2.5 + 1.2;
+      this.size = Math.random() * 1.5 + 0.5;
+      this.speedX = (Math.random() - 0.5) * 0.15;
+      this.speedY = (Math.random() - 0.5) * 0.15;
+      this.opacity = Math.random() * 0.5 + 0.1;
       this.isSparkle = Math.random() > 0.3;
-      this.speed = this.isSparkle ? (Math.random() * 0.5 + 0.2) : 0;
-      this.opacity = Math.random() * 0.4 + 0.6;
+      this.speed = this.isSparkle ? (Math.random() * 0.2 + 0.1) : 0;
       this.fade = Math.random() * 0.008 + 0.003;
       this.dir = Math.random() > 0.5 ? 1 : -1;
       this.color = Math.random() > 0.7 ? '#3b82f6' : '#ffffff';
