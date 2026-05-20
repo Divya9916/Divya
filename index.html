@@ -267,11 +267,16 @@
 
   /* ── PROJECTS LIST ── */
   .projects-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     margin: 3rem auto 0;
-    max-width: 850px;
+    max-width: 1120px;
+  }
+  @media(max-width:768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   .project-card {
@@ -668,7 +673,7 @@
 <section id="projects">
   <div class="section-inner">
     <div class="section-eyebrow">Portfolio</div>
-    <h2 class="section-title">Featured <em>Projects</em></h2>
+    <h2 class="section-title"><em>Projects</em></h2>
     <div class="projects-grid">
       
       <!-- Project 01: Myntra (Excel) -->
