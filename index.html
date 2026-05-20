@@ -30,8 +30,8 @@
     --accent:  #3b82f6;   /* Vibrant Blue */
     --accent2: #6366f1;   /* Indigo */
     --text:    #FFFFFF;
-    --muted:   #9ca3af;
-    --muted2:  #6b7280;
+    --muted:   #f8fafc;
+    --muted2:  #f1f5f9;
     --radius:  12px;
   }
 
@@ -265,78 +265,21 @@
   }
   .exp-list li::before { content:'▸'; position:absolute; left:0; color:var(--accent); font-size:0.75rem; top:0.7rem; }
 
-  /* ── PROJECTS TIMELINE ── */
-  .timeline-container {
-    position: relative;
-    max-width: 1100px;
-    margin: 4rem auto 0;
-    padding: 1rem 0;
+  /* ── PROJECTS LIST ── */
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 3rem auto 0;
+    max-width: 850px;
   }
-  /* Background Line */
-  .timeline-container::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background: rgba(255, 255, 255, 0.05);
-    top: 0; bottom: 0; left: 50%;
-    margin-left: -1px;
-    z-index: 1;
-  }
-  /* Glowing Progress Line */
-  .timeline-progress-line {
-    position: absolute;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--accent), var(--accent2));
-    top: 0; left: 50%;
-    margin-left: -1px;
-    z-index: 2;
-    box-shadow: 0 0 15px var(--accent);
-    height: 0%;
-    transition: height 0.1s ease-out;
-  }
-
-  .timeline-item {
-    padding: 2.5rem 40px;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
-    opacity: 1; /* Changed from 0 to 1 for immediate visibility */
-    transition: all 0.8s cubic-bezier(0.17, 0.85, 0.32, 1.27);
-  }
-  .timeline-item.left { left: 0; text-align: right; transform: translateX(-80px); }
-  .timeline-item.right { left: 50%; text-align: left; transform: translateX(80px); }
-  
-  .timeline-item.revealed {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .timeline-dot {
-    position: absolute;
-    width: 16px; height: 16px;
-    background: #000;
-    border: 3px solid var(--accent);
-    border-radius: 50%;
-    top: 4rem;
-    z-index: 3;
-    box-shadow: 0 0 12px var(--accent);
-    transition: all 0.3s ease;
-  }
-  .timeline-item.left .timeline-dot { right: -8px; }
-  .timeline-item.right .timeline-dot { left: -8px; }
-  
-  .timeline-item.revealed .timeline-dot { background: var(--accent); transform: scale(1.2); }
-  .timeline-item:hover .timeline-dot { transform: scale(1.5); box-shadow: 0 0 20px var(--accent); }
 
   .project-card {
     background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
     padding: 1.75rem; transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
     backdrop-filter: blur(12px); display: flex; flex-direction: column;
-    text-align: left;
+    text-align: left; height: 100%;
   }
-  .timeline-item.left .project-card { margin-right: 20px; }
-  .timeline-item.right .project-card { margin-left: 20px; }
-  
   .project-card:hover { border-color: var(--accent); box-shadow: 0 12px 40px rgba(14, 165, 233, 0.2); transform: translateY(-5px); }
   .project-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
   .project-num { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: var(--muted); opacity: 0.4; line-height: 1; }
@@ -578,13 +521,7 @@
     .contact-info h3 { font-size:2.2rem; }
     .contact-form-card { padding:2rem 1.5rem; }
     
-    /* MOBILE TIMELINE */
-    .timeline-container::after, .timeline-progress-line { left: 31px; }
-    .timeline-item { width: 100% !important; padding-left: 60px !important; padding-right: 1.25rem !important; text-align: left !important; transform: translateX(50px) !important; }
-    .timeline-item.revealed { transform: translateX(0) !important; }
-    .timeline-item.right { left: 0 !important; }
-    .timeline-item.left .timeline-dot, .timeline-item.right .timeline-dot { left: 23px !important; right: auto !important; top: 4rem !important; }
-    .timeline-item.left .project-card, .timeline-item.right .project-card { margin-left: 0 !important; margin-right: 0 !important; }
+    /* MOBILE */
   }
 </style>
 </head>
@@ -732,95 +669,70 @@
   <div class="section-inner">
     <div class="section-eyebrow">Portfolio</div>
     <h2 class="section-title">Featured <em>Projects</em></h2>
-    <div class="timeline-container">
-      <div class="timeline-progress-line"></div>
+    <div class="projects-grid">
       
       <!-- Project 01: Myntra (Excel) -->
-      <div class="timeline-item left">
-        <div class="timeline-dot"></div>
-        <div class="project-card">
-          <div class="project-header"><div class="project-num">01</div><a href="https://github.com/Divya9916/Myntra_Excel" target="_blank" class="project-github">GitHub ↗</a></div>
-          <span class="project-tool" style="background:rgba(104,211,145,0.1);color:#68D391;border:1px solid rgba(104,211,145,0.25);">Excel</span>
-          <div class="project-title">Myntra Apparel Sales Analysis</div>
-          <div class="project-desc"><strong>Problem:</strong> Identified pricing inefficiencies and demand gaps across 1,000+ Myntra apparel SKUs.<br><br><strong>Outcome:</strong> Discovered that high discounts do not correlate with top ratings, optimizing inventory strategy.</div>
-        </div>
+      <div class="project-card">
+        <div class="project-header"><div class="project-num">01</div><a href="https://github.com/Divya9916/Myntra_Excel" target="_blank" class="project-github">GitHub ↗</a></div>
+        <span class="project-tool" style="background:rgba(104,211,145,0.1);color:#68D391;border:1px solid rgba(104,211,145,0.25);">Excel</span>
+        <div class="project-title">Myntra Apparel Sales Analysis</div>
+        <div class="project-desc"><strong>Problem:</strong> Identified pricing inefficiencies and demand gaps across 1,000+ Myntra apparel SKUs.<br><br><strong>Outcome:</strong> Discovered that high discounts do not correlate with top ratings, optimizing inventory strategy.</div>
       </div>
 
       <!-- Project 02: MacDonalds (Excel) -->
-      <div class="timeline-item right">
-        <div class="timeline-dot"></div>
-        <div class="project-card">
-          <div class="project-header"><div class="project-num">02</div><a href="https://github.com/Divya9916/MacDonalds_Sales_Analysis_Excel_Dashboard" target="_blank" class="project-github">GitHub ↗</a></div>
-          <span class="project-tool" style="background:rgba(246,224,94,0.1);color:#F6E05E;border:1px solid rgba(246,224,94,0.25);">Excel</span>
-          <div class="project-title">McDonald's Sales Analysis</div>
-          <div class="project-desc"><strong>Problem:</strong> Analyzed restaurant operational datasets to identify sales trends and performance bottlenecks.<br><br><strong>Outcome:</strong> Built an executive dashboard uncovering key revenue drivers and peak operational hours.</div>
-        </div>
+      <div class="project-card">
+        <div class="project-header"><div class="project-num">02</div><a href="https://github.com/Divya9916/MacDonalds_Sales_Analysis_Excel_Dashboard" target="_blank" class="project-github">GitHub ↗</a></div>
+        <span class="project-tool" style="background:rgba(246,224,94,0.1);color:#F6E05E;border:1px solid rgba(246,224,94,0.25);">Excel</span>
+        <div class="project-title">McDonald's Sales Analysis</div>
+        <div class="project-desc"><strong>Problem:</strong> Analyzed restaurant operational datasets to identify sales trends and performance bottlenecks.<br><br><strong>Outcome:</strong> Built an executive dashboard uncovering key revenue drivers and peak operational hours.</div>
       </div>
 
       <!-- Project 03: Amazon (SQL) -->
-      <div class="timeline-item left">
-        <div class="timeline-dot"></div>
-        <div class="project-card">
-          <div class="project-header"><div class="project-num">03</div><a href="https://github.com/Divya9916/Amazon_Analysis_SQL" target="_blank" class="project-github">GitHub ↗</a></div>
-          <span class="project-tool" style="background:rgba(99,179,237,0.1);color:#63B3ED;border:1px solid rgba(99,179,237,0.25);">SQL</span>
-          <div class="project-title">Amazon Sales Dataset Analysis</div>
-          <div class="project-desc"><strong>Problem:</strong> Analyzed multi-category sales data using SQL to uncover product performance and demand patterns.<br><br><strong>Outcome:</strong> Developed complex queries to track regional sales distribution and identify high-return categories.</div>
-        </div>
+      <div class="project-card">
+        <div class="project-header"><div class="project-num">03</div><a href="https://github.com/Divya9916/Amazon_Analysis_SQL" target="_blank" class="project-github">GitHub ↗</a></div>
+        <span class="project-tool" style="background:rgba(99,179,237,0.1);color:#63B3ED;border:1px solid rgba(99,179,237,0.25);">SQL</span>
+        <div class="project-title">Amazon Sales Dataset Analysis</div>
+        <div class="project-desc"><strong>Problem:</strong> Analyzed multi-category sales data using SQL to uncover product performance and demand patterns.<br><br><strong>Outcome:</strong> Developed complex queries to track regional sales distribution and identify high-return categories.</div>
       </div>
 
       <!-- Project 04: Swiggy (SQL) -->
-      <div class="timeline-item right">
-        <div class="timeline-dot"></div>
-        <div class="project-card">
-          <div class="project-header"><div class="project-num">04</div><a href="https://github.com/Divya9916/Swiggy-Advance-SQL-Project" target="_blank" class="project-github">GitHub ↗</a></div>
-          <span class="project-tool" style="background:rgba(99,179,237,0.1);color:#63B3ED;border:1px solid rgba(99,179,237,0.25);">SQL</span>
-          <div class="project-title">Swiggy Platform Analysis</div>
-          <div class="project-desc"><strong>Problem:</strong> Explored customer, order, and restaurant delivery data to evaluate platform performance.<br><br><strong>Outcome:</strong> Optimized SQL queries to analyze revenue, order frequency, and delivery partner efficiency.</div>
-        </div>
+      <div class="project-card">
+        <div class="project-header"><div class="project-num">04</div><a href="https://github.com/Divya9916/Swiggy-Advance-SQL-Project" target="_blank" class="project-github">GitHub ↗</a></div>
+        <span class="project-tool" style="background:rgba(99,179,237,0.1);color:#63B3ED;border:1px solid rgba(99,179,237,0.25);">SQL</span>
+        <div class="project-title">Swiggy Platform Analysis</div>
+        <div class="project-desc"><strong>Problem:</strong> Explored customer, order, and restaurant delivery data to evaluate platform performance.<br><br><strong>Outcome:</strong> Optimized SQL queries to analyze revenue, order frequency, and delivery partner efficiency.</div>
       </div>
 
       <!-- Project 05: Financial Analysis (Power BI) -->
-      <div class="timeline-item left">
-        <div class="timeline-dot"></div>
-        <div class="project-card">
-          <div class="project-header"><div class="project-num">05</div><a href="https://github.com/Divya9916/FinancialAnalysis-PowerBi-Data-Modelling-and-Dax" target="_blank" class="project-github">GitHub ↗</a></div>
-          <span class="project-tool" style="background:rgba(104,211,145,0.1);color:#68D391;border:1px solid rgba(104,211,145,0.25);">Power BI</span>
-          <div class="project-title">Financial Market Analysis</div>
-          <div class="project-desc"><strong>Problem:</strong> Evaluated historical financial data to assess market performance and investment risks.<br><br><strong>Outcome:</strong> Built an interactive Power BI dashboard tracking returns, volatility, and sector comparisons.</div>
-        </div>
+      <div class="project-card">
+        <div class="project-header"><div class="project-num">05</div><a href="https://github.com/Divya9916/FinancialAnalysis-PowerBi-Data-Modelling-and-Dax" target="_blank" class="project-github">GitHub ↗</a></div>
+        <span class="project-tool" style="background:rgba(104,211,145,0.1);color:#68D391;border:1px solid rgba(104,211,145,0.25);">Power BI</span>
+        <div class="project-title">Financial Market Analysis</div>
+        <div class="project-desc"><strong>Problem:</strong> Evaluated historical financial data to assess market performance and investment risks.<br><br><strong>Outcome:</strong> Built an interactive Power BI dashboard tracking returns, volatility, and sector comparisons.</div>
       </div>
 
       <!-- Project 06: SuperMarket (Python) -->
-      <div class="timeline-item right">
-        <div class="timeline-dot"></div>
-        <div class="project-card">
-          <div class="project-header"><div class="project-num">06</div><a href="https://github.com/Divya9916/SuperMarketBillingSystem_Python" target="_blank" class="project-github">GitHub ↗</a></div>
-          <span class="project-tool" style="background:rgba(183,148,244,0.1);color:#B794F4;border:1px solid rgba(183,148,244,0.25);">Python</span>
-          <div class="project-title">SuperMarket Billing System</div>
-          <div class="project-desc"><strong>Problem:</strong> Developed an automated billing solution to streamline retail transactions and data entry.<br><br><strong>Outcome:</strong> Optimized purchase tracking and branch-level demographics analysis using Python.</div>
-        </div>
+      <div class="project-card">
+        <div class="project-header"><div class="project-num">06</div><a href="https://github.com/Divya9916/SuperMarketBillingSystem_Python" target="_blank" class="project-github">GitHub ↗</a></div>
+        <span class="project-tool" style="background:rgba(183,148,244,0.1);color:#B794F4;border:1px solid rgba(183,148,244,0.25);">Python</span>
+        <div class="project-title">SuperMarket Billing System</div>
+        <div class="project-desc"><strong>Problem:</strong> Developed an automated billing solution to streamline retail transactions and data entry.<br><br><strong>Outcome:</strong> Optimized purchase tracking and branch-level demographics analysis using Python.</div>
       </div>
 
       <!-- Project 07: Banking (Python) -->
-      <div class="timeline-item left">
-        <div class="timeline-dot"></div>
-        <div class="project-card">
-          <div class="project-header"><div class="project-num">07</div><a href="https://github.com/Divya9916/Banking_acc_mgt_system_python_advance" target="_blank" class="project-github">GitHub ↗</a></div>
-          <span class="project-tool" style="background:rgba(183,148,244,0.1);color:#B794F4;border:1px solid rgba(183,148,244,0.25);">Python</span>
-          <div class="project-title">Banking Management System</div>
-          <div class="project-desc"><strong>Problem:</strong> Built a secure account management system to handle financial transactions and records.<br><br><strong>Outcome:</strong> Implemented advanced Python logic for account handling, security, and transaction history.</div>
-        </div>
+      <div class="project-card">
+        <div class="project-header"><div class="project-num">07</div><a href="https://github.com/Divya9916/Banking_acc_mgt_system_python_advance" target="_blank" class="project-github">GitHub ↗</a></div>
+        <span class="project-tool" style="background:rgba(183,148,244,0.1);color:#B794F4;border:1px solid rgba(183,148,244,0.25);">Python</span>
+        <div class="project-title">Banking Management System</div>
+        <div class="project-desc"><strong>Problem:</strong> Built a secure account management system to handle financial transactions and records.<br><br><strong>Outcome:</strong> Implemented advanced Python logic for account handling, security, and transaction history.</div>
       </div>
 
       <!-- Project 08: Capstone (Mixed) -->
-      <div class="timeline-item right">
-        <div class="timeline-dot"></div>
-        <div class="project-card">
-          <div class="project-header"><div class="project-num">08</div><a href="https://github.com/Divya9916/Capstone_NYSE" target="_blank" class="project-github">GitHub ↗</a></div>
-          <span class="project-tool" style="background:rgba(14,165,233,0.1);color:var(--accent);border:1px solid rgba(14,165,233,0.25);">SQL | Power BI | Python</span>
-          <div class="project-title">NYSE Market Analysis Capstone</div>
-          <div class="project-desc"><strong>Problem:</strong> Evaluated historical NYSE stock data to assess company performance and sector volatility.<br><br><strong>Outcome:</strong> Delivered an end-to-end analysis using SQL and Python with a Power BI visualization suite.</div>
-        </div>
+      <div class="project-card">
+        <div class="project-header"><div class="project-num">08</div><a href="https://github.com/Divya9916/Capstone_NYSE" target="_blank" class="project-github">GitHub ↗</a></div>
+        <span class="project-tool" style="background:rgba(14,165,233,0.1);color:var(--accent);border:1px solid rgba(14,165,233,0.25);">SQL | Power BI | Python</span>
+        <div class="project-title">NYSE Market Analysis Capstone</div>
+        <div class="project-desc"><strong>Problem:</strong> Evaluated historical NYSE stock data to assess company performance and sector volatility.<br><br><strong>Outcome:</strong> Delivered an end-to-end analysis using SQL and Python with a Power BI visualization suite.</div>
       </div>
     </div>
     </div>
@@ -929,7 +841,7 @@
     <h2 class="section-title" style="text-align:center;">Get In <em>Touch</em></h2>
     <div class="contact-card">
       <div class="contact-badge"><div class="badge-dot"></div> Open to Opportunities</div>
-      <p class="contact-notice">I'm currently looking for new opportunities as a <strong>Data Analyst</strong>. Let's build something amazing together!</p>
+      <p class="contact-notice">I'm currently looking for new opportunities as a <strong>Data Analyst</strong>.</p>
       
       <div class="contact-links">
         <a href="mailto:divya649sharma99@gmail.com" class="contact-link"><i class="fa-solid fa-envelope"></i> Email</a>
@@ -970,37 +882,15 @@
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(e => { 
     if(e.isIntersecting) { 
-      if(e.target.classList.contains('timeline-item')) {
-        e.target.classList.add('revealed');
-      } else {
-        e.target.style.opacity='1'; 
-        e.target.style.transform='translateY(0)'; 
-      }
+      e.target.style.opacity='1'; 
+      e.target.style.transform='translateY(0)'; 
     } 
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-document.querySelectorAll('.skill-card, .edu-card, .exp-card, .academic-card, .contact-card, .timeline-item').forEach(el => {
-  if(!el.classList.contains('timeline-item')) {
-    el.style.opacity='0'; el.style.transform='translateY(22px)'; el.style.transition='opacity 0.55s ease-out, transform 0.55s ease-out';
-  }
+document.querySelectorAll('.skill-card, .edu-card, .exp-card, .academic-card, .contact-card').forEach(el => {
+  el.style.opacity='0'; el.style.transform='translateY(22px)'; el.style.transition='opacity 0.55s ease-out, transform 0.55s ease-out';
   revealObserver.observe(el);
-});
-
-// ── TIMELINE PROGRESS TRACKER ───────────────────────────────────────
-window.addEventListener('scroll', () => {
-  const container = document.querySelector('.timeline-container');
-  const progressLine = document.querySelector('.timeline-progress-line');
-  if(!container || !progressLine) return;
-  
-  const rect = container.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
-  const start = windowHeight * 0.8; // Start filling when container is 80% down
-  
-  let progress = (start - rect.top) / rect.height;
-  progress = Math.max(0, Math.min(1, progress));
-  
-  progressLine.style.height = `${progress * 100}%`;
 });
 
 // ── SPARKLES ANIMATION ───────────────────────────────────────────
